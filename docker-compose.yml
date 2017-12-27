@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  host:
+    build: .
+    ports:
+      - 6006:6006
+      - 8888:8888
+    volumes:
+      - ./notebooks:/notebooks
