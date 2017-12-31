@@ -6,8 +6,12 @@ RUN apt-get update && apt-get install -y wget ca-certificates \
     libfreetype6-dev libpng12-dev libhdf5-dev
 
 RUN pip3 install --upgrade pip
+# install TensorFlow stuff
 RUN pip3 install tensorflow
+RUN pip3 install prettytensor
+# install some side library
 RUN pip3 install numpy pandas sklearn matplotlib seaborn jupyter pyyaml h5py
+# keras is a hight level deep learning api
 RUN pip3 install keras --no-deps
 
 RUN ["mkdir", "notebooks"]
